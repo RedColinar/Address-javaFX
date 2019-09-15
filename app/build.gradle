@@ -1,0 +1,21 @@
+apply plugin: 'java'
+apply plugin: 'javafx-gradle-plugin'
+
+group 'com.pq'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+jfx {
+    mainClass "com.pq.address.fx.MainApp"
+    jfxAppOutputDir = "build/jfx/app"
+    jfxMainAppJarName = "project-jfx.jar"
+    deployDir = "src/main/deploy"
+    appName = "AddressFx-$version"
+    vendor = 'opq'
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    implementation group: 'org.controlsfx', name: 'controlsfx', version: '8.40.15'
+}
